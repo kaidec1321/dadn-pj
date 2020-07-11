@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bơm nước</title>
+    <link rel="stylesheet" href="/resources/css/pump.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <link href="/fontawesome-free-5.13.0-web/css/all.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="info-bar">
+        <img src="/resources/image/user.png" alt="avatar"> <a href="homepage.html"><button>Trang chủ</button></a>
+    </div>
+
+    <br><br><br><br>
+
+    <div class="tophead">
+        <h1>BƠM NƯỚC   <img src="/resources/image/pump.png" alt="pump"></h1>
+    </div>
+
+    <div class="container">
+        <form method="POST" action='/submit-form' id="my-form">
+            <div class="row">
+                <div class="col-25">
+                    <label for="time">Nhập thời gian bơm:</label>
+                </div>
+                <div class="col-75">
+                    <p><input type="number" id="time" name="minutes" placeholder="Nhập số phút..."> phút</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="area">Chọn khu vực bơm:</label>
+                </div>
+                <div class="col-75">
+                    <input type="checkbox" id="area1" name="area" value="a1">
+                    <label for="area1">Khu vực 1</label>
+                    <div class="cbr">
+                        <input type="checkbox" id="area2" name="area" value="a2">
+                        <label for="area2">Khu vực 2</label>
+                    </div>
+                    <br>
+                    <input type="checkbox" id="area3" name="area" value="a3">
+                    <label for="area3">Khu vực 3</label>
+                    <div class="cbr">
+                        <input type="checkbox" id="area4" name="area" value="a4">
+                        <label for="area4">Khu vực 4</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="start">
+                    <input type="submit" name="start" value="BƠM NƯỚC NGAY">
+                </div>
+                <div class="stop">
+                    <input type="submit" name="start" value="DỪNG BƠM">
+                </div>
+            </div>
+            <div class="row" id="server-results"></div>
+        </form>
+    </div>
+    <!-- <script>
+        $("#my-form").submit(function(event) {
+            event.preventDefault();
+            var post_url = $(this).attr("action");
+            var request_method = $(this).attr("method");
+            var form_data = $(this).serialize();
+
+            $.ajax({
+		        url : post_url,
+		        type: request_method,
+		        data : form_data
+	        }).done(function(response) {
+                document.getElementById
+                $("#server-results").html(response);
+            })
+    </script> -->
+
+
+
+</body>
+
+
+
+</html>
